@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+}
+
+/*background*/
+
+.banner{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(public/assets/imgs/img_fundo.png);
+    background-size: cover;
+}
+
+.main_elements{
+    display: flex;
+    color: aliceblue;
+    width: 500px;
+    height: 500px;
+}
