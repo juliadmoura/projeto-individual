@@ -11,9 +11,23 @@ body {
     background-size: cover;
 }
 
-.main_elements{
+.buttons{
     display: flex;
-    color: aliceblue;
-    width: 500px;
-    height: 500px;
+    box-shadow: black;
+    border-color: black;
+    color: rgb(0, 0, 0);
+    width: 180px;
+    height: 80px;
+    align-items:center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.main_elements{
+    align-items:center;
+    justify-content: center;
+    display: flex;
+    width: 80vw;
+    height: 80vh;
+
+    background-color: brown;
 }
