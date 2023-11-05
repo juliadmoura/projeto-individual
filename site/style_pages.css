@@ -1,0 +1,40 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Niramit&display=swap');
+
+
+
+body {
+    margin: 0;
+    font-family: 'Niramit', sans-serif;
+}
+/* background */
+.fundo{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f1f1f1;
+}
+/* inicio navbar */
+.navbar{
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    list-style: none;
+    background-color:#B692FD;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #f1f1f1;
+    margin-bottom: 40px;
+}
+.navbar img{
+    width: 60px;
+    height: 60px;
+}
+/* conteúdo que deu errado!
+
+.elementos .text_box{
+    display: flex;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+}*/
