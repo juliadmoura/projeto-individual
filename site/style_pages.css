@@ -4,16 +4,11 @@
 
 
 body {
+    background-color: #812323;
     margin: 0;
     font-family: 'Niramit', sans-serif;
 }
-/* background */
-.fundo{
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    background-color: #f1f1f1;
-}
+
 /* inicio navbar */
 .navbar{
     display: flex;
@@ -24,7 +19,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     color: #f1f1f1;
-    margin-bottom: 40px;
+    margin: 0;
 }
 .navbar img{
     width: 60px;
@@ -38,3 +33,11 @@ body {
     width: 100px;
     height: 100px;
 }*/
+
+.textbox{
+    display: grid;
+    width: 823px;
+    height: 1200px;
+    background-color: rgb(89, 7, 156);
+    flex-direction: column;
+}
