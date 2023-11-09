@@ -1,10 +1,10 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Niramit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Niramit&display=swap');
 
 
 
 body {
-    background-color: #812323;
+    background-color: #f1f1f1;
     margin: 0;
     font-family: 'Niramit', sans-serif;
 }
@@ -25,19 +25,78 @@ body {
     width: 60px;
     height: 60px;
 }
-/* conteúdo que deu errado!
 
-.elementos .text_box{
+.fundo{
+    height: 1500px;
+}
+
+/* JUNÇÃO DE ARTISTAS + ÁREA DE TEXTO */
+
+.elementos{
     display: flex;
-    background-color: white;
+    justify-content: space-evenly;
+    margin: 0;
+
+}
+
+.text_box{
+    display: flex;
+    width: 1020px;
+    height: 1400px;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    border: #B692FD 2px solid;
+}
+
+.artistas{
+    display: flex;
+    width: 450px;
+    height: 700px;
+    background-color: #59079c;
+    flex-direction: column;
+}
+/* ÁREA DE TEXTO - TODA EDIÇÃO DE TEXTO ESTÁ AQUI */
+.elementos .text_box h1{
+    font-family: 'Bree Serif', serif;
+    text-align: left;
+    text-indent: 50px;
+    font-size: 64px;
+    color: #368FD9 ;
+}
+.text_box p{
+    text-indent: 30px;
+    text-align: justify;
+    padding:0px 35px;
+}
+.text_box h3{
+    font-family: 'Bree Serif', serif;
+    text-align: left;
+    text-indent: 50px;
+    font-size: 34px;
+    color: #368FD9 ;
+}
+.text_box img{
+    width: 800px;
+    height: 533px;
+    align-self: center;
+}
+
+/* COLUNA DE OUTROS ARTISTAS IMPORTANTES DA ÉPOCA */
+
+.artistas{
+    display: flex;
+    
+}
+
+.artistas ul{
+    display: grid;
+    font-size: 12px;
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+
+.artistas img{
     width: 100px;
     height: 100px;
-}*/
-
-.textbox{
-    display: grid;
-    width: 823px;
-    height: 1200px;
-    background-color: rgb(89, 7, 156);
-    flex-direction: column;
 }
