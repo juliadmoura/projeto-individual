@@ -12,8 +12,12 @@ body {
 .banner{
     height: 100vh;
     width: 100vw;
-    background-color: #f1f1f1;
     background-size: cover;
+    background-image: url(public/assets/imgs/fundo_textura.png);
+}
+
+.img_home img{
+    border-radius: 60px;
 }
 
 .container{

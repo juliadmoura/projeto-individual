@@ -4,7 +4,7 @@
 
 
 body {
-    background-color: #f1f1f1;
+    background-image: url(public/assets/imgs/fundo_textura.png);
     margin: 0;
     font-family: 'Niramit', sans-serif;
 }
@@ -12,14 +12,13 @@ body {
 /* inicio navbar */
 .navbar{
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 10vh;
     list-style: none;
     background-color:#B692FD;
     align-items: center;
     justify-content: space-evenly;
     color: #f1f1f1;
-    margin: 0;
 }
 .navbar img{
     width: 60px;
@@ -41,8 +40,8 @@ body {
 
 .text_box{
     display: flex;
-    width: 1020px;
-    height: 1400px;
+    width: 60%;
+    height: 80%;
     background-color: rgb(255, 255, 255);
     flex-direction: column;
     border: #B692FD 2px solid;
@@ -50,8 +49,8 @@ body {
 
 .artistas{
     display: flex;
-    width: 450px;
-    height: 700px;
+    width: 20%;
+    height: 45%;
     background-color: #59079c;
     flex-direction: column;
 }
@@ -76,8 +75,8 @@ body {
     color: #368FD9 ;
 }
 .text_box img{
-    width: 800px;
-    height: 533px;
+    width: 615px;
+    height: 410px;
     align-self: center;
 }
 

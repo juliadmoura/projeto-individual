@@ -1,0 +1,71 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Niramit&display=swap');
+
+
+
+body {
+    background-image: url(public/assets/imgs/fundo_textura.png);
+    margin: 0;
+    font-family: 'Niramit', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    list-style: none;
+    background-color:#B692FD;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #f1f1f1;
+}
+.navbar img{
+    width: 60px;
+    height: 60px;
+}
+
+/* conteúdo cadastro */
+
+.elementos_cadastro{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cadastro_box{
+    width: 500px;
+    height: 500px;
+    background-color: #B692FD;
+    border-radius: 2px;
+    border: 2px outset #B692FD;
+
+}
+.elementos_cadastro img{
+    margin-top: 15%;
+    width: 328px;
+    height: 609px;
+}
+.formulario{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.campo input {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 30px;
+    border-radius: 4px;
+    border-style: none;
+    outline: none;
+    padding: 0% 5%;
+    font-style: italic;
+}
+.campo span {
+    color: #f1f1f1;
+    align-items:right;
+    padding: 2%;
+    font-family: 'Bree Serif', serif;
+}
