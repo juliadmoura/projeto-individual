@@ -4,6 +4,7 @@
 
 
 body {
+    height: 100%;
     background-image: url(public/assets/imgs/fundo_textura.png);
     margin: 0;
     font-family: 'Niramit', sans-serif;
@@ -18,6 +19,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     color: #f1f1f1;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 .navbar img{
     width: 60px;
@@ -26,19 +28,18 @@ body {
 
 /* conteúdo cadastro */
 
-.elementos_cadastro{
-    margin-top: 5%;
+.container_cadastro{
+    height: 90vh;
     display: flex;
     flex-direction: row;
-    justify-content: center;
 }
 
 .cadastro_box{
-    width: 500px;
-    height: 500px;
-    background-color: #B692FD;
-    border-radius: 2px;
-    border: 2px outset #B692FD;
+    height: 100%;
+    width: 50%;
+    background: #f1f1f1
+   
+
 
 }
 .elementos_cadastro img{
@@ -64,8 +65,41 @@ body {
     font-style: italic;
 }
 .campo span {
-    color: #f1f1f1;
+    color: #B692FD;
     align-items:right;
     padding: 2%;
     font-family: 'Bree Serif', serif;
+}
+
+.botao{
+    background: #368fd9;
+}
+
+.infocard{
+    height: 100%;
+    width: 50%;
+    background: rgb(181, 145, 253, 0.605499387254902)
+    
+}
+
+.infocard h1{
+    color: #f1f1f1;
+    text-align: center;
+    justify-self: center;
+    font-size: 48px;
+    font-family: 'Bree Serif', serif;
+}
+.infocard p{
+    text-indent: 30px;
+    text-align: justify;
+    padding:0px 35px;
+    color: #f1f1f1;
+}
+.infocard h3{
+    color: #f1f1f1;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 28px;
+    font-family: 'Bree Serif', serif;
+    padding: 0px 35px;
 }
