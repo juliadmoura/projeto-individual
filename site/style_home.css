@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,700&family=Oswald&display=swap');
 @import url(https://use.fontawesome.com/releases/v6.4.2/css/all.css);
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
 
 
 body {
@@ -100,14 +100,38 @@ button:hover{
 
 .sobre{
     display: flex;
-    justify-content: space-evenly;
-    background-image: url(public/assets/imgs/fundosobre.jpg);
-    height: 564px;
-    width: 1002px;
-    background-repeat: no-repeat;
+    justify-content: space-between;
+    height:464px;
+    width: 100%;
+    background-color: #57B4AA;
+
 }
-
-
+.img_sobre img{
+    width: 752px;
+    height: 464px;
+}
+.texto_sobre h2{
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400px;
+    font-size: 70px;
+    color: #ECAA22;
+    margin: 0;
+    text-shadow: 3px 4px #e6e6d8, 5px 6px #c6a39a;
+}
+.texto_sobre p{
+    text-align: justify;
+    padding: 0px 40px 0px 40px;
+    font-size:large;
+    color:#e6e6d8 ;
+    font-family: 'Public Sans', sans-serif;
+}
+.texto_sobre img{
+    height: 80px;
+    width: 80px;
+    justify-content: space-between;
+}
 .galeria{
     display: flex;
     align-items: center;
@@ -119,4 +143,5 @@ button:hover{
     box-shadow:  0 2px 6px 0 rgba(0,0,0);
     background-image: url(https://i.pinimg.com/originals/e1/b5/eb/e1b5ebad8af353b9ccfb57c62e054eef.jpg);
 }
+
 
