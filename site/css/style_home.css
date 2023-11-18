@@ -59,6 +59,8 @@ h1 span {
     background-size: cover;
 
 }
+
+/*navbar*/
 .navbar{
     display: flex;
     width: 100%;
@@ -70,9 +72,11 @@ h1 span {
     color: #121212;
     margin: 0;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    text-decoration: none;
 }
 .navbar ul:hover{
-    opacity: 0.5;
+    opacity: 0.8;
+    color: #57B4AA;
 }
 .navbar ul{
     font-family: 'Caviar Dreams', sans-serif;
