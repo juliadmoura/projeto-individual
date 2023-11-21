@@ -28,7 +28,7 @@ section{
 h1:after{
     margin: 5px 0 0 10px;
 }
-h1{
+section h1{
     width: fit-content;
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
@@ -72,9 +72,12 @@ h1 span {
     color: #121212;
     margin: 0;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-    text-decoration: none;
 }
-.navbar ul:hover{
+.navbar a{
+    text-decoration: none;
+    color: #121212;
+}
+.navbar a:hover{
     opacity: 0.8;
     color: #57B4AA;
 }
@@ -95,13 +98,17 @@ button{
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
     font-style: normal;
-    color: #e6e6d8;
+    
+
 }
 button:hover{
     opacity: 0.8;
 }
 
-
+button a{
+    text-decoration: none;
+    color: #e6e6d8;
+}
 .sobre{
     display: flex;
     justify-content: space-between;
@@ -140,12 +147,87 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content:space-around;
+    height: 550px;
+    background-color: #ECAA22;
 }
-.galeria ul{
+.galeria .box1{
     height: 400px;
     width: 300px;
     box-shadow:  0 2px 6px 0 rgba(0,0,0);
-    background-image: url(https://i.pinimg.com/originals/e1/b5/eb/e1b5ebad8af353b9ccfb57c62e054eef.jpg);
+    background-image: url(https://cdn.blog.estrategiavestibulares.com.br/vestibulares/wp-content/uploads/2023/05/Rita_Lee_in_Aracatuba-08_by_Marco_Senche-1.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    text-align: center;
+    
 }
-
-
+.galeria .box2{
+    height: 400px;
+    width: 300px;
+    box-shadow:  0 2px 6px 0 rgba(0,0,0);
+    background-image: url(https://mrwallpaper.com/images/high/abba-in-denim-outfit-3hf1gytdvl8jrpd1.webp);
+    background-size:cover;
+    background-position: center;
+    text-align: center;
+    
+}
+.galeria .box3{
+    height: 400px;
+    width: 300px;
+    box-shadow:  0 2px 6px 0 rgba(0,0,0);
+    background-image: url(https://www.nme.com/wp-content/uploads/2016/10/84843405_ratemy_jackson_01-696x1064.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    
+}
+.titulo_posts{
+    display: flex;
+    justify-content: center;
+    background-color: #ECAA22;
+}
+.titulo_posts h1{
+    width: fit-content;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400px;
+    font-size: 65px;
+    color: #D25525;
+    margin: 0px;
+    text-shadow: 3px 4px #e6e6d8, 5px 6px #c6a39a;
+}
+.galeria span{
+    color:#121212;
+    background-color: #e6e6d8;
+    background-size: cover;
+    width: 300px;
+    width: max-content;
+    text-align: center;
+    font-family: 'Public Sans', sans-serif;
+}
+.box1:hover, .box2:hover, .box3:hover{
+    cursor: pointer;
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+.footer{
+    display: flex;
+    height: 100px;
+    justify-content:space-around;
+    background-color: #57B4AA;
+    margin: 0;
+    align-items: center;
+    font-family: 'Caviar Dreams', sans-serif;
+}
+.footer li{
+    list-style: none;
+}
+.footer img{
+    height: 15px;
+    width: 15px;
+    
+}
+.footer a{
+    text-decoration: none;
+    color: #121212;
+}
