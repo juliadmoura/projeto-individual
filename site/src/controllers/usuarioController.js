@@ -27,8 +27,7 @@ function autenticar(req, res) {
                                         id: resultadoAutenticar[0].id,
                                         email: resultadoAutenticar[0].email,
                                         nome: resultadoAutenticar[0].nome,
-                                        senha: resultadoAutenticar[0].senha,
-                                        aquarios: resultadoAquarios
+                                        senha: resultadoAutenticar[0].senha
                                     });
                                 } else {
                                     res.status(204).json({ aquarios: [] });
@@ -57,7 +56,7 @@ function cadastrar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
     var empresaId = req.body.empresaServer;
-    var cpf = req.body.cpfServer;
+    var select_decada = req.body.select_decadaServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -66,15 +65,13 @@ function cadastrar(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
-    } else if (empresaId == undefined) {
-        res.status(400).send("Sua empresa está undefined!");
-    } else if (cpf == undefined) {
-        res.status(400).send("Seu cpf está undefined!");
+    } else if (decada == undefined) {
+        res.status(400).send("Sua década favorita está undefined!");
     }
         else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, senha, empresaId, cpf)
+        usuarioModel.cadastrar(nome, email, senha, decada)
             .then(
                 function (resultado) {
                     res.json(resultado);
