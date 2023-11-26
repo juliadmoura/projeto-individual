@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="css/style_cadastro.css">
+    <link rel="icon" href="assets/imgs/florzinha.png">
+
+</head>
+
+    
+<body>
+
+    <div class="navbar">
+        <ul><a href="homepage.html">Home</a></ul>
+        <ul><a href="quiz.html">Quiz</a></ul>
+        <ul><a href="cadastro.html">Cadastre-se</a></ul>
+        <ul><a href="login.html">Login</a></ul>
+    </div>
+</div>
+
+<div class="container_cadastro">
+    <div class="infocard">
+       <h1>Bem-vindo!</h1><br>
+       <p>Para participar do blog, é necessário fazer um cadastro com a gente. É totalmente gratuito e após feito você terá acesso a uma área exclusiva para membros onde você pode compartilhar suas playlists, álbuns favoritos ou simplesmente o que está ouvindo no momento. <br></p>
+       <div class="img_cadastro"><img src="assets/imgs/imgcadastro.png" alt=""></div>
+        
+       
+       <h3>Estamos ansiosos para descobrir o que você tem para nos contar!</h3>
+       
+    </div>
+    <div class="cadastro_box">
+        <div class="formulario">
+            <h1>Cadastre-se</h1>
+
+            <div class="campo">
+            <span>Nome: <br></span>
+            <input type="text" placeholder="Ex: Gabriel Santos" id="input_nome">
+            </div>
+            <br>
+            <div class="campo">
+            <span> E-mail: <br></span>
+            <input placeholder="example@example.com" id="input_email">
+            </div>
+            <br>
+            <div class="campo">
+            <span> Senha:<br></span>
+            <input type="password" placeholder="**********" id="input_senha">
+            </div>
+            <br>
+            <div class="campo">
+            <span> Confirme sua senha:<br></span>
+            <input type="password" placeholder="**********" id="input_confsenha">
+            </div>
+            <br>
+            <div class="campo">
+                <span> Década favorita:</span>
+                <input type="text" placeholder="4 dígitos, somente números" id="input_decada">
+            </div>
+            <div id="validacao">
+              
+            </div>
+            <br>
+            <div id="botao">
+                <button class="botao" onclick="botaoCadastro()">Finalizar</button>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    
+</div>
+
+</body>
+
+<script>
+
+function botaoCadastro() {
+    var nomevar = input_nome.value
+    var emailvar = input_email.value
+    var senhavar = input_senha.value
+    var conf_senhavar = input_confsenha.value
+    var decadavar = input_decada.value
+  
+    validacao.innerHTML = "";
+  
+    if (nomevar == "" || emailvar == "" || senhavar == "" || conf_senhavar == "" || decadavar == "" ) {
+      alert(`Preencha todos os campos!`)
+    }
+    else if (emailvar.endsWith(`.com`) == false) {
+      validacao.innerHTML += `Email incorreto! <br>`
+    }
+    else if (senhavar.length < 8) {
+      validacao.innerHTML += `A senha deve conter no mínimo 8 caracteres.<br>`
+    }
+    else if (conf_senhavar != senhavar) {
+      validacao.innerHTML += `As senhas não conferem.<br>`
+    }
+    else if (decadavar.length != 4){
+      validacao.innerHTML += `Década favorita inválida`
+    }
+    else {
+      alert(`Cadastro realizado com sucesso`);
+  
+      // Enviando o valor da nova input
+      fetch("http://localhost:3333/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // crie um atributo que recebe o valor recuperado aqui
+          // Agora vá para o arquivo routes/usuario.js
+          nomeServer: nomevar,
+          emailServer: emailvar,
+          senhaServer: senhavar,
+          decadaServer: decadavar
+        }),
+      })
+        .then(function (resposta) {
+          console.log("resposta: ", resposta);
+  
+          if (resposta.ok) {
+            cardErro.style.display = "block";
+  
+            mensagem_erro.innerHTML =
+              "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+  
+            setTimeout(() => {
+              window.location = "login.html";
+            }, "2000");
+  
+            limparFormulario();
+            finalizarAguardar();
+          } else {
+            throw "Houve um erro ao tentar realizar o cadastro!";
+          }
+        })
+        .catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+          finalizarAguardar();
+        });
+  
+      return false;
+    }
+  }
+  
+  // function listar() {
+  //   fetch("/empresas/listar", {
+  //     method: "GET",
+  //   })
+  //     .then(function (resposta) {
+  //       resposta.json().then((empresas) => {
+  //         empresas.forEach((empresa) => {
+  //           listaEmpresas.innerHTML += `<option value='${empresa.id}'>${empresa.cnpj}</option>`;
+  //         });
+  //       });
+  //     })
+  //     .catch(function (resposta) {
+  //       console.log(`#ERRO: ${resposta}`);
+  //     });
+  // }
+  
+  function sumirMensagem() {
+    cardErro.style.display = "none";
+  }
+
+</script>

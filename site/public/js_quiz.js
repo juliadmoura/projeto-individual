@@ -112,64 +112,64 @@ function finalizar_quiz() {
 
 const questions = [
   {
-    question: "Dentro de qual elemento HTML colocamos o JavaScript?",
+    question: "Antes da carreira musical, quais foram os trabalhos de Cássia Eller?",
     answers: [
-      { text: "<javascript>", correct: false },
-      { text: "<js>", correct: false },
-      { text: "<script>", correct: true },
-      { text: "<scripting>", correct: false }
+      { text: "Vendedora, motorista e advogada", correct: false },
+      { text: "Diarista, secretária e médica", correct: false },
+      { text: "Garçonete, cozinheira e secretária", correct: true },
+      { text: "Garçonete, vendedora e bancária", correct: false }
     ]
   },
   {
-    question: "Onde é o lugar correto para inserir JavaScript?",
+    question: "Qual música Michael Jackson escreveu sobre o problema que enfrentava com sua pele?",
     answers: [
-      { text: "Tanto no <head> quanto no <body> está correto", correct: true },
-      { text: "No <body>", correct: false },
-      { text: "No <head>", correct: false },
-      { text: "Em outro lugar", correct: false }
+      { text: "Billie Jean", correct: false },
+      { text: "Smooth Criminal", correct: false },
+      { text: "Black or White", correct: true },
+      { text: "Chicago", correct: false }
     ]
   },
   {
-    question: 'Qual é a sintaxe correta para se referir a um script externo chamado "xxx.js"',
+    question: 'Em qual ano Rita Lee foi presa durante a ditadura militar?',
     answers: [
-      { text: '<script src="xxx.js">', correct: true },
-      { text: '<script href="xxx.js">', correct: false },
-      { text: '<script name="xxx.js">', correct: false },
-      { text: "Nenhuma das alternativas", correct: false }
+      { text: '1976', correct: true },
+      { text: '1984', correct: false },
+      { text: '1966', correct: false },
+      { text: '1970', correct: false }
     ]
   },
   {
-    question: 'O arquivo JavaScript externo deve conter a tag <script>',
+    question: 'O grupo musical ABBA escreveu a música "Mamma Mia" exclusivamente para o filme de mesmo título.',
     answers: [
       { text: "Verdadeiro", correct: false },
       { text: "Falso", correct: true }
     ]
   },
   {
-    question: 'Como escrever "Hello World" numa caixa de alerta?',
+    question: 'Quem foi o responsável por revolucionar os videoclipes?',
     answers: [
-      { text: 'msg("Hello World");', correct: false },
-      { text: 'alert("Hello World");', correct: true },
-      { text: 'msgBox("Hello World");', correct: false },
-      { text: 'alertBox("Hello World");', correct: false }
+      { text: 'Queen', correct: false },
+      { text: 'Elvis Presley', correct: false },
+      { text: 'Michael Jackson', correct: true },
+      { text: 'Madonna', correct: false }
     ]
   },
   {
-    question: 'Como podemos criar uma função no JavaScript?',
+    question: 'Quais artistas faleceram por conta da AIDS?',
     answers: [
-      { text: 'function:myFunction()', correct: false },
-      { text: 'function myFunction()', correct: true },
-      { text: 'function = myFunction()', correct: false },
-      { text: 'Nenhum desses códigos criaria uma função', correct: false }
+      { text: 'George Michael, Ney Matogrosso e Tim Maia', correct: false },
+      { text: 'Renato Russo, Cazuza e Freddie Mercury', correct: true },
+      { text: 'Cássia Eller, Freddie Mercury e Michael Jackson', correct: false },
+      { text: 'Tim Maia, Renato Russo e Rita Lee', correct: false }
     ]
   },
   {
-    question: 'Como podemos chamar uma função chamada "minhaFuncao"?',
+    question: 'Qual a formação de Freddie Mercury?',
     answers: [
-      { text: 'call minhaFuncao()', correct: false },
-      { text: 'call function minhaFuncao()', correct: false },
-      { text: 'Nenhum desses códigos chamaria essa função', correct: false },
-      { text: 'minhaFuncao()', correct: true },
+      { text: 'Odontologia', correct: false },
+      { text: 'Música', correct: false },
+      { text: 'Biologia', correct: false },
+      { text: 'Design gráfico', correct: true },
     ]
   },
 ]

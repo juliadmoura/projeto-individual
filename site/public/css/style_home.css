@@ -159,6 +159,8 @@ button a{
     background-size: cover;
     margin: 0;
     text-align: center;
+   -webkit-filter: grayscale(100%);
+   filter: grayscale(100%);
     
 }
 .galeria .box2{
@@ -169,6 +171,8 @@ button a{
     background-size:cover;
     background-position: center;
     text-align: center;
+   -webkit-filter: grayscale(100%);
+   filter: grayscale(100%);
     
 }
 .galeria .box3{
@@ -179,7 +183,8 @@ button a{
     background-position: center;
     background-size: cover;
     text-align: center;
-    
+   -webkit-filter: grayscale(100%);
+   filter: grayscale(100%);
 }
 .titulo_posts{
     display: flex;
@@ -207,9 +212,19 @@ button a{
 }
 .box1:hover, .box2:hover, .box3:hover{
     cursor: pointer;
-    transform: scale(1.15);
-    opacity: 0.8;
+    
+    -webkit-filter: grayscale(0%);
+   filter: grayscale(0%);
 }
+.galeria::after{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 100, 0, .4);
+}
+
 .footer{
     display: flex;
     height: 100px;

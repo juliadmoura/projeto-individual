@@ -21,9 +21,9 @@ body {
   
 }
 .pai {
-  height: 100vh;
+  height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content:space-evenly;
   align-items: center;
 }
 /*NAVBAR*/
@@ -54,10 +54,10 @@ a{
 
 
 .container {
-  background-color:#e6e6d8;;
-  width: 60%;
-  max-width: 800px;
-
+  background-color:#e6e6d8;
+  width: 50%;
+  height: 50%;
+  margin-bottom: 50px;
   border-radius: 6px;
   padding: 16px;
   box-shadow: 0 0 2px 2px;
@@ -142,4 +142,24 @@ a{
 
 .incorrect {
   background-color: #dd2121;
+}
+
+.spotify{
+  height: 100%;
+  width: 40%;
+  background-color:#e6e6d8;
+  padding: 2px 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  border-radius: 12px;
+}
+h2{
+    text-align: left;
+    font-family: 'Hello Valentica', sans-serif;
+    font-size: 50px;
+    color: #ECAA22;
+    margin: 0;
+    text-shadow: 3px 4px #e6e6d8;
+    text-indent: 180px;
 }

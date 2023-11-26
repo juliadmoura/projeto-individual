@@ -73,8 +73,6 @@ body {
     color: #368FD9 ;
 }
 .text_box img{
-    width: 800px;
-    height: 533px;
     align-self: center;
 }
 
@@ -93,7 +91,3 @@ body {
 
 }
 
-.artistas img{
-    width: 100px;
-    height: 100px;
-}
