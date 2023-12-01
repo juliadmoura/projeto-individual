@@ -10,21 +10,21 @@ CREATE DATABASE projetoindividual;
 
 USE projetoindividual;
 
-CREATE TABLE decadas (
-	id INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE decada (
+	iddecada INT PRIMARY KEY AUTO_INCREMENT,
 	ano char(4)
 );
 
 CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
+	idusuario INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
 	email VARCHAR(50),
 	senha VARCHAR(50),
 	fk_decada INT,
-	FOREIGN KEY (fk_decada) REFERENCES decada(id)
+	FOREIGN KEY (fk_decada) REFERENCES decada(iddecada)
 );
 
-insert into decadas values
+insert into decada values
 (null, '1950'),
 (null, '1960'),
 (null, '1970'),
@@ -33,9 +33,14 @@ insert into decadas values
 (null, '2000'),
 (null, '2010');
 
+create table quiz (
+idquiz int primary key auto_increment,
+pontuacao int,
+fkusuario int,
+FOREIGN KEY (fkusuario) REFERENCES usuario(idusuario)
+);
 
-alter table usuario add column cpf char(11);
 
 describe usuario;
-
+truncate table decada;
 select * from usuario;

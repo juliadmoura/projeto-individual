@@ -10,6 +10,100 @@ const answers = document.querySelectorAll(".answer")
 let questao_atual = 0
 let acertos = 0
 
+/* questoes do quiz em arrays */
+
+const questions = [
+  {
+    question: "Antes da carreira musical, quais foram os trabalhos de Cássia Eller?",
+    answers: [
+      { text: "Vendedora, motorista e advogada", correct: false },
+      { text: "Diarista, secretária e médica", correct: false },
+      { text: "Garçonete, cozinheira e secretária", correct: true },
+      { text: "Garçonete, vendedora e bancária", correct: false }
+    ]
+  },
+  {
+    question: "Qual música Michael Jackson escreveu sobre o problema que enfrentava com sua pele?",
+    answers: [
+      { text: "Billie Jean", correct: false },
+      { text: "Smooth Criminal", correct: false },
+      { text: "Black or White", correct: true },
+      { text: "Chicago", correct: false }
+    ]
+  },
+  {
+    question: 'Em qual ano Rita Lee foi presa durante a ditadura militar?',
+    answers: [
+      { text: '1976', correct: true },
+      { text: '1984', correct: false },
+      { text: '1966', correct: false },
+      { text: '1970', correct: false }
+    ]
+  },
+  {
+    question: 'O grupo musical ABBA escreveu a música "Mamma Mia" exclusivamente para o filme de mesmo título.',
+    answers: [
+      { text: "Verdadeiro", correct: false },
+      { text: "Falso", correct: true }
+    ]
+  },
+  {
+    question: 'Quem foi o responsável por revolucionar os videoclipes?',
+    answers: [
+      { text: 'Queen', correct: false },
+      { text: 'Elvis Presley', correct: false },
+      { text: 'Michael Jackson', correct: true },
+      { text: 'Madonna', correct: false }
+    ]
+  },
+  {
+    question: 'Quais artistas faleceram por conta da AIDS?',
+    answers: [
+      { text: 'George Michael, Ney Matogrosso e Tim Maia', correct: false },
+      { text: 'Renato Russo, Cazuza e Freddie Mercury', correct: true },
+      { text: 'Cássia Eller, Freddie Mercury e Michael Jackson', correct: false },
+      { text: 'Tim Maia, Renato Russo e Rita Lee', correct: false }
+    ]
+  },
+  {
+    question: 'Qual a formação de Freddie Mercury?',
+    answers: [
+      { text: 'Odontologia', correct: false },
+      { text: 'Música', correct: false },
+      { text: 'Biologia', correct: false },
+      { text: 'Design gráfico', correct: true },
+    ]
+  },
+  {
+    question: 'Qual dessas cantoras é vegetariana?',
+    answers: [
+      { text: 'Madonna', correct: true },
+      { text: 'Britney Spears', correct: false },
+      { text: 'Rihanna', correct: false },
+      { text: 'Nelly Furtado', correct: false },
+    ]
+  },
+  {
+    question: 'Complete a música: Quem te vê passar assim por mim/ Não sabe o que é _____/ Ter que ver você, assim, sempre tão linda',
+    answers: [
+      { text: 'Viver', correct: false },
+      { text: 'Chorar', correct: false },
+      { text: 'Sofrer', correct: true },
+      { text: 'Sorrir', correct: false },
+    ]
+  },
+  {
+    question: 'Qual cantora acabou popularizando os piercings no umbigo nos anos 2000?',
+    answers: [
+      { text: 'Mariah Carey', correct: false },
+      { text: 'Britney Spears', correct: true },
+      { text: 'Lana del Rey', correct: false },
+      { text: 'Madonna', correct: false },
+    ]
+  },
+
+]
+
 startGameButton.addEventListener("click", startGame)
 botao_prox_questao.addEventListener("click", mostrar_prox_pergunta)
 
@@ -78,7 +172,7 @@ function finalizar_quiz() {
   const totalQuestions = questions.length
   const performance = Math.floor(acertos * 100 / totalQuestions) /* transformando em porcentagem e arrendondando o resultado */
   
-  let message = ""
+  let message = "" /* não entra no inner.html por conta de ser uma variável que existe no span do questions container */
 
   switch (true) { /* condição, similar ao else if */
     case (performance >= 90):
@@ -101,75 +195,63 @@ function finalizar_quiz() {
       Você acertou ${acertos} de ${totalQuestions} questões!
       <span>Resultado: ${message}</span>
     </p>
-    <button 
-      onclick=window.location.reload() 
-      class="button">
-      Refazer teste
-    </button>
+  
   `
+    enviando_resultado()
 }
- /* questoes do quiz em arrays */
+ 
 
-const questions = [
-  {
-    question: "Antes da carreira musical, quais foram os trabalhos de Cássia Eller?",
-    answers: [
-      { text: "Vendedora, motorista e advogada", correct: false },
-      { text: "Diarista, secretária e médica", correct: false },
-      { text: "Garçonete, cozinheira e secretária", correct: true },
-      { text: "Garçonete, vendedora e bancária", correct: false }
-    ]
-  },
-  {
-    question: "Qual música Michael Jackson escreveu sobre o problema que enfrentava com sua pele?",
-    answers: [
-      { text: "Billie Jean", correct: false },
-      { text: "Smooth Criminal", correct: false },
-      { text: "Black or White", correct: true },
-      { text: "Chicago", correct: false }
-    ]
-  },
-  {
-    question: 'Em qual ano Rita Lee foi presa durante a ditadura militar?',
-    answers: [
-      { text: '1976', correct: true },
-      { text: '1984', correct: false },
-      { text: '1966', correct: false },
-      { text: '1970', correct: false }
-    ]
-  },
-  {
-    question: 'O grupo musical ABBA escreveu a música "Mamma Mia" exclusivamente para o filme de mesmo título.',
-    answers: [
-      { text: "Verdadeiro", correct: false },
-      { text: "Falso", correct: true }
-    ]
-  },
-  {
-    question: 'Quem foi o responsável por revolucionar os videoclipes?',
-    answers: [
-      { text: 'Queen', correct: false },
-      { text: 'Elvis Presley', correct: false },
-      { text: 'Michael Jackson', correct: true },
-      { text: 'Madonna', correct: false }
-    ]
-  },
-  {
-    question: 'Quais artistas faleceram por conta da AIDS?',
-    answers: [
-      { text: 'George Michael, Ney Matogrosso e Tim Maia', correct: false },
-      { text: 'Renato Russo, Cazuza e Freddie Mercury', correct: true },
-      { text: 'Cássia Eller, Freddie Mercury e Michael Jackson', correct: false },
-      { text: 'Tim Maia, Renato Russo e Rita Lee', correct: false }
-    ]
-  },
-  {
-    question: 'Qual a formação de Freddie Mercury?',
-    answers: [
-      { text: 'Odontologia', correct: false },
-      { text: 'Música', correct: false },
-      { text: 'Biologia', correct: false },
-      { text: 'Design gráfico', correct: true },
-    ]
-  },
-]
+
+function enviando_resultado() {
+  console.log(`acertos`)
+  var ss_idusuario = sessionStorage.ID_USUARIO; // pegando o id q ta salvo no navegador
+  // Enviando o valor da nova input
+  fetch("/quiz/cadastro_pontuacao/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      // crie um atributo que recebe o valor recuperado aqui
+      // Agora vá para o arquivo routes/usuario.js
+      pontuacaoServer: acertos, //linha que eu quero e pontuacao é a coluna que eu quero do 
+      idusuarioServer: ss_idusuario //
+    }),
+  })
+  enviarparadiv()
+}
+/* função criada para pegar o resultado e enviar ao grafico */
+
+function enviarparadiv() {
+
+
+  fetch(`/quiz/listar_pontuacao`,
+  { cache: 'no-store' })
+
+  .then(function (response) {
+      if (response.ok) {
+          response.json().then(function (resposta) {
+              console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+              resposta.reverse();
+
+              plotarGrafico(resposta);
+
+          });
+      } else {
+          console.error('Nenhum dado encontrado ou erro na API');
+      }
+  })
+      .catch(function (error) {
+          console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+      });
+}
+function plotarGrafico(resposta){
+
+  resultados.innerHTML=`1º: ${resposta[2].nome} <br>
+                        Pontuação: ${resposta[2].pontuacao} <br><br>
+                        2º: ${resposta[1].nome} <br>
+                        Pontuação: ${resposta[1].pontuacao}<br><br>
+                        3º: ${resposta[0].nome} <br>
+                        Pontuação: ${resposta[0].pontuacao}<br>
+                        `
+}

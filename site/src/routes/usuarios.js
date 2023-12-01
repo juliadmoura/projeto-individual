@@ -11,5 +11,7 @@ router.post("/cadastrar", function (req, res) {
 router.post("/autenticar", function (req, res) {
     usuarioController.autenticar(req, res);
 });
-
+router.get("/pegarid/:decada", function (req, res) {
+    usuarioController.pegarid(req, res);
+});
 module.exports = router;
